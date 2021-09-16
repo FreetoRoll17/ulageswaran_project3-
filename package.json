@@ -1,0 +1,22 @@
+{
+  "name": "ulageswaran_3_10082021",
+  "version": "1.0.0",
+  "description": "Projet 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "./dart-sass/sass sass/sources.scss style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreetoRoll17/ulageswaran_project3-.git"
+  },
+  "keywords": [
+    "projet3"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FreetoRoll17/ulageswaran_project3-/issues"
+  },
+  "homepage": "https://github.com/FreetoRoll17/ulageswaran_project3-#readme"
+}

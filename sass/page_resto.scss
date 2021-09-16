@@ -1,0 +1,117 @@
+/*--Restaurants*/
+
+h2 {
+  font-family: 'Shrikhand', cursive;
+}
+
+.restaurant {
+    background-color: gainsboro;
+    padding: 30px 5px 30px 5px;
+   h2{
+     padding-left: 10px;
+   }
+  }
+
+  .block__resto {
+    background-color: white;
+    border-radius: 25px 25px 25px 25px; 
+    height: 210px;
+    margin: 10px;
+    line-height: 1px;
+
+    p {
+      margin-left: 10px;
+    }
+    h4 {
+      margin-left: 10px;
+    }
+  
+
+    img{
+      height: 150px;
+      width: 368px;
+      object-fit: cover ;
+      border-radius: 25px 25px 0px 0px;
+      margin: 0px;
+      
+    }
+    
+  }
+
+  .lieu_restaurant{
+    font-weight: 100;
+  }
+  
+
+  /*Page restaurant*/
+
+  .head__img img{
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    margin: 0px;
+    
+  }
+  .repas__titre {
+    font-weight: bolder;
+  }
+  .main__menu {
+    background-color: rgb(224, 222, 222);
+    border-radius: 25px 25px 0px 0px;
+    padding: 10px;
+  }
+
+  .plats_nom{
+    background-color: red;
+    padding: 1px 10px 1px 5px;
+    margin: 5px;
+    height: 75px;
+    width: 355px;
+    line-height: 1px;
+    text-indent: 10px;
+    border-radius: 25px 25px 25px 25px;
+    
+  }
+.plats_nom:hover {
+    background-color: red;
+    /* rétrécir la case , "width"
+    z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/ 
+}
+
+ /*
+ .checked {
+     à cacher SOUS .plats_nom
+     background à ne pas oublier 
+     border
+     font awesome "check"
+     z-index à faire sur .checked (z-index= 1) ou jouer avec flexbox
+
+ }
+ */
+
+  .plats_composants{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn__commander button{
+
+    background-color: lighten(#9356dc, 10%);
+    background-blend-mode: lighten;
+    color:white;
+    padding: 15px;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 4px 4px 6px #000;
+  }
+
+
+
+.menu__full {
+    animation-name: fade_down2;
+    animation-duration: 10s;
+}
+
+@keyframes fade_down2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

@@ -1,5 +1,137 @@
-.head {
-    background-color:red;
+@import "variables";
+@import "mixins";
+@import "header";
+@import "footer";
+@import "page_resto";
+
+
+
+
+ 
+p {
+    font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+    font-family: 'Roboto', sans-serif;
 }
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: white;
+   
+   
+}
+
+a {
+    text-decoration: none;
+    color:black;
+    
+  }
+  
+  li {
+    list-style-type: none;
+  }
+
+  
+
+  /* Page principale */ 
+
+  .barre{
+    background: #eaeaea;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  
+    box-shadow: inset 0px 5px 5px 0px #dddddd;
+  }
+
+  .introduction {
+    h2 {
+      font-weight: bolder;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+      color: #4d4d4d;
+    }
+  }
+
+  .btn__explorer button{
+
+      background-color: lighten(#9356dc, 10%);
+      background-blend-mode: lighten;
+      color:white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 25px 25px 25px 25px;
+      box-shadow: 4px 4px 6px #000;
+      display: flex;
+      align-content: center;
+    
+  }
+
+
+  /*Fonctionnement*/
+
+  .fonction {
+    margin-bottom: 50px;
+  }
+  .fonction h2 {
+    padding: 20px;
+  }
+  @media screen and (min-width: 1440px) {
+    .fonction h2 {
+      text-align: center;
+    }
+  }
+  .fonction__etape {
+    list-style-type: none;
+  }
+  @media screen and (min-width: 768px) {
+    .fonction__etape {
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .fonction__etape li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 25px;
+    margin: 15px 20px 15px 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 8px 2px #c4c4c4;
+    background-color: whitesmoke;
+  }
+  .fonction__etape li p {
+    font-weight: 500;
+    margin-left: 20px;
+  }
+  .fonction__etape li:hover {
+    background: #f2eafb;
+  }
+  .fonction__etape li:hover .fas {
+    color: #9356dc;
+  }
+  .fonction__etape--num {
+    background-color: #9356dc;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 9px;
+    margin-left: -40px;
+  }
+  

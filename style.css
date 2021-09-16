@@ -1,0 +1,270 @@
+@charset "UTF-8";
+/*.plats {
+    animation: fadein 6s ease-in-out;
+    @include desktop {
+      width: 400px;
+    }
+  }*/
+footer {
+  background-color: #353535;
+  padding: 25px;
+  color: white;
+}
+
+h3 {
+  font-family: "Shrikhand", "sans-serif";
+  padding: 5px 0 20px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li {
+  padding: 5px 0 5px 0;
+}
+ul li a {
+  color: white;
+}
+
+.fa-utensils {
+  margin-right: 12px;
+}
+
+.fa-hands-helping {
+  margin-right: 5px;
+}
+
+/*--Restaurants*/
+h2 {
+  font-family: "Shrikhand", cursive;
+}
+
+.restaurant {
+  background-color: gainsboro;
+  padding: 30px 5px 30px 5px;
+}
+.restaurant h2 {
+  padding-left: 10px;
+}
+
+.block__resto {
+  background-color: white;
+  border-radius: 25px 25px 25px 25px;
+  height: 210px;
+  margin: 10px;
+  line-height: 1px;
+}
+.block__resto p {
+  margin-left: 10px;
+}
+.block__resto h4 {
+  margin-left: 10px;
+}
+.block__resto img {
+  height: 150px;
+  width: 368px;
+  object-fit: cover;
+  border-radius: 25px 25px 0px 0px;
+  margin: 0px;
+}
+
+.lieu_restaurant {
+  font-weight: 100;
+}
+
+/*Page restaurant*/
+.head__img img {
+  height: 300px;
+  width: 400px;
+  object-fit: cover;
+  margin: 0px;
+}
+
+.repas__titre {
+  font-weight: bolder;
+}
+
+.main__menu {
+  background-color: #e0dede;
+  border-radius: 25px 25px 0px 0px;
+  padding: 10px;
+}
+
+.plats_nom {
+  background-color: red;
+  padding: 1px 10px 1px 5px;
+  margin: 5px;
+  height: 75px;
+  width: 355px;
+  line-height: 1px;
+  text-indent: 10px;
+  border-radius: 25px 25px 25px 25px;
+}
+
+.plats_nom:hover {
+  background-color: red;
+  /* rétrécir la case , "width"
+  z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
+}
+
+/*
+.checked {
+    à cacher SOUS .plats_nom
+    background à ne pas oublier 
+    border
+    font awesome "check"
+    z-index à faire sur .checked (z-index= 1) ou jouer avec flexbox
+
+}
+*/
+.plats_composants {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn__commander button {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  color: white;
+  padding: 15px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 4px 4px 6px #000;
+}
+
+.menu__full {
+  animation-name: fade_down2;
+  animation-duration: 10s;
+}
+
+@keyframes fade_down2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* Page principale */
+.barre {
+  background: #eaeaea;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 5px 5px 0px #dddddd;
+}
+
+.introduction h2 {
+  font-weight: bolder;
+  text-align: center;
+}
+.introduction p {
+  text-align: center;
+  color: #4d4d4d;
+}
+
+.btn__explorer button {
+  background-color: #ae80e5;
+  background-blend-mode: lighten;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 4px 4px 6px #000;
+  display: flex;
+  align-content: center;
+}
+
+/*Fonctionnement*/
+.fonction {
+  margin-bottom: 50px;
+}
+
+.fonction h2 {
+  padding: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+  .fonction h2 {
+    text-align: center;
+  }
+}
+.fonction__etape {
+  list-style-type: none;
+}
+
+@media screen and (min-width: 768px) {
+  .fonction__etape {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.fonction__etape li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 25px;
+  margin: 15px 20px 15px 30px;
+  border-radius: 20px;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
+  background-color: whitesmoke;
+}
+
+.fonction__etape li p {
+  font-weight: 500;
+  margin-left: 20px;
+}
+
+.fonction__etape li:hover {
+  background: #f2eafb;
+}
+
+.fonction__etape li:hover .fas {
+  color: #9356dc;
+}
+
+.fonction__etape--num {
+  background-color: #9356dc;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 9px;
+  margin-left: -40px;
+}
+
+/*# sourceMappingURL=style.css.map */
