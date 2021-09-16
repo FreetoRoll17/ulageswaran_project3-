@@ -52,9 +52,12 @@ h2 {
 .block__resto {
   background-color: white;
   border-radius: 25px 25px 25px 25px;
-  height: 210px;
+  height: 215px;
   margin: 10px;
   line-height: 1px;
+}
+.block__resto .lieu_coeur {
+  display: flex;
 }
 .block__resto p {
   margin-left: 10px;
@@ -92,8 +95,12 @@ h2 {
   padding: 10px;
 }
 
+.animation_check {
+  display: flex;
+}
+
 .plats_nom {
-  background-color: red;
+  background-color: white;
   padding: 1px 10px 1px 5px;
   margin: 5px;
   height: 75px;
@@ -103,12 +110,49 @@ h2 {
   border-radius: 25px 25px 25px 25px;
 }
 
-.plats_nom:hover {
-  background-color: red;
-  /* rétrécir la case , "width"
-  z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
+.check {
+  transition: ease-in 0.5s;
+  position: absolute;
+  opacity: 0;
+  justify-items: right;
+  margin-left: 300px;
+  justify-content: center;
 }
 
+.fa-check-circle {
+  color: white;
+  background-color: #99E2D0;
+  padding: 1px 10px 1px 5px;
+  margin: 5px;
+  height: 75px;
+  width: 55px;
+  line-height: 1px;
+  text-indent: 10px;
+  border-radius: 0px 25px 25px 0px;
+}
+
+.animation_check:hover .plats_nom {
+  width: 290px;
+  border-radius: 25px 0px 0px 25px;
+  transition: 0.5s ease-in-out;
+}
+
+.animation_check:hover .check {
+  opacity: 1;
+}
+
+.plats_composants {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fas .fa-check-circle {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* rétrécir la case , "width"
+z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
 /*
 .checked {
     à cacher SOUS .plats_nom
@@ -119,11 +163,6 @@ h2 {
 
 }
 */
-.plats_composants {
-  display: flex;
-  justify-content: space-between;
-}
-
 .btn__commander button {
   background-color: #ae80e5;
   background-blend-mode: lighten;
@@ -146,6 +185,51 @@ h2 {
     opacity: 1;
   }
 }
+/*Loader*/
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 550px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #99E2D0;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #99E2D0 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.head {
+  size: 50%;
+}
+
 p {
   font-family: "Roboto", sans-serif;
 }
@@ -194,7 +278,7 @@ li {
   color: #4d4d4d;
 }
 
-.btn__explorer button {
+.btn__explorer_style {
   background-color: #ae80e5;
   background-blend-mode: lighten;
   color: white;
@@ -203,6 +287,7 @@ li {
   border-radius: 25px 25px 25px 25px;
   box-shadow: 4px 4px 6px #000;
   display: flex;
+  text-align: center;
   align-content: center;
 }
 
@@ -265,6 +350,15 @@ li {
   border-radius: 50%;
   padding: 5px 9px;
   margin-left: -40px;
+}
+
+.lieu_restaurant {
+  display: fex;
+}
+
+.fas {
+  color: grey;
+  margin-left: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
