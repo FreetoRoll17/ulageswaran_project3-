@@ -1,5 +1,7 @@
 /*--Restaurants*/
 
+
+
 h2 {
   font-family: 'Shrikhand', cursive;
 }
@@ -15,21 +17,27 @@ h2 {
   .block__resto {
     background-color: white;
     border-radius: 25px 25px 25px 25px; 
-    height: 215px;
+    height: 225px;
     margin: 10px;
-    line-height: 1px;
+    line-height: 0px;
+    padding: 0,2px;
 
 
     .lieu_coeur {
       display: flex;
+      justify-content: space-between;
     }
+
+    .coeur{
+      padding-right: 10px;
+    }
+
     p {
       margin-left: 10px;
     }
     h4 {
       margin-left: 10px;
     }
-  
 
     img{
       height: 150px;
@@ -40,6 +48,7 @@ h2 {
       
     }
     
+    
   }
 
   .lieu_restaurant{
@@ -48,6 +57,14 @@ h2 {
   
 
   /*Page restaurant*/
+
+  .head h1{
+    font: 'Shrikhand', cursive;
+  }
+  
+  p{
+    font-size: 12px;
+  }
 
   .head__img img{
     height: 300px;
@@ -86,32 +103,45 @@ h2 {
       position: absolute;
       opacity: 0;
       justify-items: right;
-      margin-left: 300px;
+      margin-left: 290px;
       justify-content: center;
+      background-color: #99E2D0;
+      padding: 1px 7px 1px 10px;
+      margin: 5px 0px 0px 313px;
+      border-radius: 0px 25px 25px 0px;
+      width: 45px;
       
+     
     }
 
     .fa-check-circle {
       color: white;
-      background-color: #99E2D0;
-      padding: 1px 10px 1px 5px;
-      margin: 5px;
-      height: 75px;
-      width: 55px;
-      line-height: 1px;
+      line-height: 75px;
       text-indent: 10px;
-      border-radius: 0px 25px 25px 0px;
-      
+      text-align: center;
+      vertical-align: middle;
+      animation-name: rotate;
+      animation-duration: 2s;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(-380deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
     }
 
     .animation_check:hover .plats_nom {
-      width: 290px;
+      width: 295px;
       border-radius: 25px 0px 0px 25px;
-      transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in;
     }
 
     .animation_check:hover .check {
       opacity: 1;
+      transition:ease 0.5s;
     }
 
     .plats_composants {
@@ -119,11 +149,7 @@ h2 {
       justify-content: space-between;
     }
    
-    .fas .fa-check-circle {
-      text-align: center;
-      vertical-align: middle;
-    }
-
+    
     /* rétrécir la case , "width"
     z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/ 
 
@@ -139,10 +165,13 @@ h2 {
  }
  */
 
-
+.btn__commander{
+  text-align: center;
+  margin : 30px 0px 30px 0px;
+}
   .btn__commander button{
 
-    background-color: lighten(#9356dc, 10%);
+    background: linear-gradient(-50deg ,#9356DC, #FF79DA);
     background-blend-mode: lighten;
     color:white;
     padding: 15px;
@@ -150,14 +179,23 @@ h2 {
     box-shadow: 4px 4px 6px #000;
   }
 
+  
 
 
 .menu__full {
     animation-name: fade_down2;
-    animation-duration: 10s;
+    animation-duration: 5s;
 }
 
 @keyframes fade_down2 {
     from {opacity: 0;}
     to {opacity: 1;}
+  }
+
+  .francaise {
+    background-image: url("images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: 600px;
+    padding: 265px 0px 0px 0px;
+    border-radius: 0px;
+    object-fit:contain;
   }

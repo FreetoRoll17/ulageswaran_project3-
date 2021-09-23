@@ -29,7 +29,7 @@ ul li a {
 }
 
 .fa-utensils {
-  margin-right: 12px;
+  margin-right: 5px;
 }
 
 .fa-hands-helping {
@@ -52,12 +52,17 @@ h2 {
 .block__resto {
   background-color: white;
   border-radius: 25px 25px 25px 25px;
-  height: 215px;
+  height: 225px;
   margin: 10px;
-  line-height: 1px;
+  line-height: 0px;
+  padding: 0, 2px;
 }
 .block__resto .lieu_coeur {
   display: flex;
+  justify-content: space-between;
+}
+.block__resto .coeur {
+  padding-right: 10px;
 }
 .block__resto p {
   margin-left: 10px;
@@ -78,6 +83,14 @@ h2 {
 }
 
 /*Page restaurant*/
+.head h1 {
+  font: "Shrikhand", cursive;
+}
+
+p {
+  font-size: 12px;
+}
+
 .head__img img {
   height: 300px;
   width: 400px;
@@ -115,40 +128,47 @@ h2 {
   position: absolute;
   opacity: 0;
   justify-items: right;
-  margin-left: 300px;
+  margin-left: 290px;
   justify-content: center;
+  background-color: #99E2D0;
+  padding: 1px 7px 1px 10px;
+  margin: 5px 0px 0px 313px;
+  border-radius: 0px 25px 25px 0px;
+  width: 45px;
 }
 
 .fa-check-circle {
   color: white;
-  background-color: #99E2D0;
-  padding: 1px 10px 1px 5px;
-  margin: 5px;
-  height: 75px;
-  width: 55px;
-  line-height: 1px;
+  line-height: 75px;
   text-indent: 10px;
-  border-radius: 0px 25px 25px 0px;
+  text-align: center;
+  vertical-align: middle;
+  animation-name: rotate;
+  animation-duration: 2s;
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(-380deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .animation_check:hover .plats_nom {
-  width: 290px;
+  width: 295px;
   border-radius: 25px 0px 0px 25px;
-  transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in;
 }
 
 .animation_check:hover .check {
   opacity: 1;
+  transition: ease 0.5s;
 }
 
 .plats_composants {
   display: flex;
   justify-content: space-between;
-}
-
-.fas .fa-check-circle {
-  text-align: center;
-  vertical-align: middle;
 }
 
 /* rétrécir la case , "width"
@@ -163,8 +183,13 @@ z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
 
 }
 */
+.btn__commander {
+  text-align: center;
+  margin: 30px 0px 30px 0px;
+}
+
 .btn__commander button {
-  background-color: #ae80e5;
+  background: linear-gradient(-50deg, #9356DC, #FF79DA);
   background-blend-mode: lighten;
   color: white;
   padding: 15px;
@@ -174,7 +199,7 @@ z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
 
 .menu__full {
   animation-name: fade_down2;
-  animation-duration: 10s;
+  animation-duration: 5s;
 }
 
 @keyframes fade_down2 {
@@ -185,40 +210,55 @@ z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
     opacity: 1;
   }
 }
-/*Loader*/
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  width: 80px;
-  height: 550px;
+.francaise {
+  background-image: url("images/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 600px;
+  padding: 265px 0px 0px 0px;
+  border-radius: 0px;
+  object-fit: contain;
 }
 
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
+/*Loader*/
+.loader {
+  display: none;
+  background-color: #9356DC;
+  height: 2010px;
+  width: 400px;
+  line-height: 730px;
+  text-align: center;
   position: absolute;
+  justify-content: center;
+  animation-name: loader-ease;
+  animation-duration: 5s;
+}
+
+@keyframes loader-ease {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #99E2D0;
   border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #99E2D0 transparent transparent transparent;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
 }
 
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-
-@keyframes lds-ring {
+@keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
@@ -226,8 +266,14 @@ z-index à faire sur .plats_nom (z-index= 2) ou jouer avec flexbox*/
     transform: rotate(360deg);
   }
 }
+/*body*/
 .head {
-  size: 50%;
+  height: 60px;
+}
+
+.head img {
+  width: 50%;
+  margin: auto;
 }
 
 p {
@@ -262,11 +308,21 @@ li {
 /* Page principale */
 .barre {
   background: #eaeaea;
+  height: 50px;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   box-shadow: inset 0px 5px 5px 0px #dddddd;
+}
+.barre .barre_recherche {
+  margin-left: 55px;
+}
+.barre input {
+  background: #eaeaea;
+  border-color: #eaeaea;
+  border-style: none;
+  margin-left: 10px;
 }
 
 .introduction h2 {
@@ -278,17 +334,19 @@ li {
   color: #4d4d4d;
 }
 
-.btn__explorer_style {
-  background-color: #ae80e5;
-  background-blend-mode: lighten;
+.center_btn {
+  text-align: center;
+}
+
+.btn_explorer {
+  /*revoir class pour mieux styliser/center*/
+  background: linear-gradient(-50deg, #9356DC, #FF79DA);
   color: white;
-  text-align: center;
   padding: 15px;
+  width: 230px;
   border-radius: 25px 25px 25px 25px;
-  box-shadow: 4px 4px 6px #000;
-  display: flex;
-  text-align: center;
-  align-content: center;
+  border-color: ghostwhite;
+  box-shadow: 4px 1px 6px ghostwhite;
 }
 
 /*Fonctionnement*/
@@ -307,6 +365,8 @@ li {
 }
 .fonction__etape {
   list-style-type: none;
+  padding: 3px;
+  margin-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -324,8 +384,7 @@ li {
   justify-content: flex-start;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 25px;
-  margin: 15px 20px 15px 30px;
+  margin: 15px 20px 15px 0px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: whitesmoke;
@@ -349,7 +408,18 @@ li {
   color: white;
   border-radius: 50%;
   padding: 5px 9px;
-  margin-left: -40px;
+}
+
+.fa-mobile-alt {
+  margin-left: 20px;
+}
+
+.fa-list {
+  margin-left: 20px;
+}
+
+.fa-store {
+  margin-left: 20px;
 }
 
 .lieu_restaurant {
@@ -358,7 +428,18 @@ li {
 
 .fas {
   color: grey;
-  margin-left: 20px;
+}
+
+.fa-utensils {
+  color: white;
+}
+
+.fa-hands-helping {
+  color: white;
+}
+
+.fa-heart:hover {
+  color: #9356dc;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,10 +14,12 @@
     <!--Loader-->
 
     <div class="loader">
-        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <div class="lds-dual-ring"></div>
+        <p>Chargement...</p>
         <p>Chargement...</p>
     </div>
 
+<div class=""></div> <!-- jouer avec display none et block, transition delay/condition-->
     <!-- Tête de page -->
     <header class="head">
         <a href="index.html"><img src="images/ohmyfood.png" alt="restaurant la palette du gout"></a>
@@ -26,13 +28,13 @@
     <div class="center">
         <div class="barre">
             <div class="barre_recherche">
-                <input type="search" name="city" value="Paris Belleville" placeholder="Votre ville">
+                <i class="fas fa-map-marker-alt"></i><input type="search" name="city" value="Paris Belleville" placeholder="Votre ville">
             </div>
         </div>
         <div class="introduction">
             <h2> Réservez le menu qui vous convient </h2>
             <p> Découvrez des restaurants d'exception, sélectionnés par nos soins </p>
-            <div class="btn__explorer">
+            <div class="center_btn">
             <button class="btn_explorer">Explorer nos restaurants </button>
             </div>
         </div>
@@ -41,17 +43,17 @@
             <h2>Fonctionnement</h2>
             <ul class="fonction__etape">
                 <li>
-                    <div class="fonction__etape--num">1</div>
+                    <p class="fonction__etape--num">1</p>
                     <i class="fas fa-mobile-alt"></i>
                     <p>Choisissez un restaurant</p> 
                 </li>
                 <li>
-                    <div class="fonction__etape--num">2</div>
+                    <p class="fonction__etape--num">2</p>
                     <i class="fas fa-list"></i>
                     <p>Composez votre menu</p>  
                 </li>
                 <li>
-                    <div class="fonction__etape--num">3</div>
+                    <p class="fonction__etape--num">3</p>
                     <i class="fas fa-store"></i>
                     <p>Dégustez au restaurant</p>   
                 </li>
@@ -66,17 +68,19 @@
                 <div class="block__resto">
                     <a href="Pages/palettedugout.html">
                         <div class="block_img">
-                            <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du gout">
+                            <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du gout">  
+                        </div>
+                        <div class="block_text">
                             <div class="nom_restaurant">
                                 <h4>La palette du goût</h4>
                             </div>
-                        </div>
-                        <div class="lieu_coeur">
-                            <div class="lieu_restaurant">
-                                <p>Ménilmontant</p>  
-                            </div>
-                            <div class="coeur">
-                                <i class="far fa-heart"></i>
+                            <div class="lieu_coeur">
+                                <div class="lieu_restaurant">
+                                    <p>Ménilmontant</p>  
+                                </div>
+                                <div class="coeur">
+                                    <i class="far fa-heart"></i>
+                                </div>
                             </div>
                         </div>
                     </a>
@@ -147,8 +151,8 @@
     <footer>
         <h3>ohmyfood</h3>
         <ul>
-            <li><a href="#"> Proposer un restaurant</a></li>
-            <li><a href="#">Devenir partenaire</a></li>
+            <li><i class="fas fa-utensils"></i><a href="#"> Proposer un restaurant</a></li>
+            <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
